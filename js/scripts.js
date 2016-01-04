@@ -1,5 +1,8 @@
 var map;
 
+var lat = document.getElementById('latitude');
+var lng = document.getElementById('longitude');
+
 function loadMap() {
 	
 	// Set the map options
@@ -40,11 +43,19 @@ function loadMap() {
 	};
 
 	// Get the id of the map container div
-	var mapid = document.getElementById('map');
+	var mapid = document.getElementById('map-container');
 
 	// Create the map
 	map = new google.maps.Map(mapid, mapOptions);
 
+	updateCurrentLatLng(map.getCenter());
+
+}
+
+
+function updateCurrentLatLng(LatLng) {
+	latitude.innerHTML = LatLng.lat();
+	longitude.innerHTML = LatLng.lng();
 }
 
 // Load the map

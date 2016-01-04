@@ -1,9 +1,22 @@
-html, body, #map {
+html, body, #map-container {
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
-#map {
-	
+#map-coordinates {
+	position: fixed;
+	bottom: 25px;
+	left: 250px;
+	width: 500px;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 20px;
+	color: #000;
+	border: 2px solid #000;
+	background: rgb(245, 245, 245);
+	background: rgba(245, 245, 245, .9);
+}
+
+#map-coordinates span {
+	margin: 0 5px;
 }
